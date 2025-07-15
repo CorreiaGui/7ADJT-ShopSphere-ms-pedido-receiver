@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: pedido-receiver
+
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: guest
+    password: guest
+
+  webclient:
+    pedido:
+      url: http://pedido-service:8080
+
+logging:
+  level:
+    root: INFO

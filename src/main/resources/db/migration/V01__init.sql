@@ -1,0 +1,1 @@
+-- Script inicial opcional para Flyway
