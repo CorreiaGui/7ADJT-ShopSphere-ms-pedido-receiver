@@ -9,13 +9,12 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString // Para ver todos os campos no log
+@ToString
 public class Pedido implements Serializable {
+
     private String idCliente;
-    private List<String> skus;
-    private List<Integer> quantidades;
+    private List<ItemPedido> itens;
     private String numeroCartao;
-    private Double valorTotal;
     private String status;
 
 }
