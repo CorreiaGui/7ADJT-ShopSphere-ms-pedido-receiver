@@ -31,7 +31,4 @@ public class PedidoReceiverListener {
         System.out.println("Pedido recebido: " + pedido);
         pedidoReceiverUseCase.processarPedido(pedido);
     }
-
-
-
 }

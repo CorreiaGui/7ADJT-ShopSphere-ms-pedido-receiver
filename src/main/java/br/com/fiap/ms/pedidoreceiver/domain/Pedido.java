@@ -12,9 +12,9 @@ import java.util.List;
 @ToString
 public class Pedido implements Serializable {
 
-    private String idCliente;
-    private List<ItemPedido> itens;
-    private String numeroCartao;
-    private String status;
+    public String idCliente;
+    public List<ItemPedido> itens;
+    public String numeroCartao;
+    public String status;
 
 }
