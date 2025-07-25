@@ -6,20 +6,10 @@ services:
     ports:
       - "8080:8080"
     depends_on:
-      - pedido-service
       - rabbitmq
     environment:
       SPRING_RABBITMQ_HOST: rabbitmq
       SPRING_WEBCLIENT_PEDIDO_URL: http://pedido-service:8080
-    restart: always
-
-  pedido-service:
-    image: pedido_service:latest
-    container_name: pedido_service
-    networks:
-      - default
-    environment:
-      SPRING_RABBITMQ_HOST: rabbitmq
     restart: always
 
   rabbitmq:
