@@ -3,6 +3,7 @@ package br.com.fiap.ms.pedidoreceiver.gateway.queue;
 import br.com.fiap.ms.pedidoreceiver.usecase.PedidoReceiverUseCase;
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import br.com.fiap.ms.pedidoreceiver.domain.Pedido;
@@ -17,7 +18,7 @@ public class PedidoReceiverListener {
 
     private final PedidoReceiverUseCase pedidoReceiverUseCase;
 
-    public PedidoReceiverListener(PedidoReceiverUseCase pedidoReceiverUseCase) {
+    public PedidoReceiverListener(@Qualifier("pedidoReceiverUseCaseImpl")PedidoReceiverUseCase pedidoReceiverUseCase) {
         this.pedidoReceiverUseCase = pedidoReceiverUseCase;
     }
 
