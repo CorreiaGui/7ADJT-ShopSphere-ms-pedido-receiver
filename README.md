@@ -1,6 +1,6 @@
 # 📦 ShopSphere – Pedido-Receiver
 
-Serviço responsável pelo envio de evento de cria.
+Serviço responsável pelo recebimento de eventos de criação de pedidos e envio das informações ao sistema via RabbitMQ.
 
 ---
 
