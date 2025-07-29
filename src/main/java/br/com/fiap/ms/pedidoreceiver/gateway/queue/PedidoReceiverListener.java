@@ -16,23 +16,4 @@ import br.com.fiap.ms.pedidoreceiver.domain.Pedido;
 @Component
 public class PedidoReceiverListener {
 
-    private final PedidoReceiverUseCase pedidoReceiverUseCase;
-
-    public PedidoReceiverListener(@Qualifier("pedidoReceiverUseCaseImpl")PedidoReceiverUseCase pedidoReceiverUseCase) {
-        this.pedidoReceiverUseCase = pedidoReceiverUseCase;
-    }
-
-    /**
-     * Método que escuta a fila "pedido.queue" e processa os pedidos recebidos.
-     *
-     * @param pedido O pedido recebido da fila.
-     */
-    @RabbitListener(queues = "novo-pedido-queue")
-    public void receberPedido(Pedido pedido) {
-        System.out.println("Pedido recebido: " + pedido);
-        pedidoReceiverUseCase.processarPedido(pedido);
-    }
-
-
-
 }
